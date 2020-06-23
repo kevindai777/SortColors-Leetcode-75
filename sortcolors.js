@@ -1,5 +1,5 @@
 //Given an array of 0's, 1's, and 2's that represent red, white, and blue respectively,
-//sort the array so that the color sequence is reds first, then whites, then blues.
+//sort the array so that the color sequence is reds (0) first, then whites (1), then blues (2).
 
 let nums = [2,0,1,1,0,2]
 
@@ -21,6 +21,7 @@ while (index <= end && start < end) {
         nums[index] = nums[end]
         nums[end--] = 2
     } else {
+    //While moving the 0's and 2's, the 1's are automatically placed in the right spot
         index++
     }
 }
